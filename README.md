@@ -70,7 +70,7 @@ total project each milestone is worth.
 
 
 ## Design notebook 
-*Every Sunday @ 11:59pm Pacific, starting Sunday, March 27. (15%)*
+*Every Sunday @ 11:59pm Pacific, starting Sunday, April 3. (15%)*
 
 Everyone will keep an _individual_ design notebook. This notebook documents
 your design process over the course of the project: important design decisions,
