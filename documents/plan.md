@@ -4,6 +4,8 @@
 
 ## Implementation plan
 
+## Contingency plan
+
 ## Teamwork plan 
 
 *If applicable*

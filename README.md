@@ -51,14 +51,14 @@ total project each milestone is worth.
 **Remember: there are no late days for project milestones. If work is
 late, you will receive no credit.**
 
-  - [Design notebook](#user-content-design-notebook) (10%) Every Sunday @ 11:59pm Pacific,
+  - [Design notebook](#user-content-design-notebook) (15%) Every Sunday @ 11:59pm Pacific,
       starting Sunday, March 27.
   - [Critiques](#user-content-critiques) (10%) Every Tuesday @ 11:59pm Pacific,
       starting Tuesday, March 29.
 
 
-  - [Project repositories](#user-content-repositories) Sunday, March 27 @ 11:59pm Pacific.
-  - [Project description and plan](#user-content-project-description-and-plan) (5%) Sunday, March 27 @ 11:59pm Pacific.
+  - [Project repositories](#user-content-repositories) (5%) Sunday, March 27 @ 11:59pm Pacific.
+  - [Project description and plan](#user-content-project-description-and-plan) (10%) Sunday, March 27 @ 11:59pm Pacific.
 
 
   - [Language design and implementation overview](#user-content-language-design-and-implementation-overview) (10%) Sunday, 
@@ -79,7 +79,7 @@ late, you will receive no credit.**
 
 
 ## Design notebook 
-*Every Sunday @ 11:59pm Pacific, starting Sunday, March 27. (10%)*
+*Every Sunday @ 11:59pm Pacific, starting Sunday, March 27. (15%)*
 
 Everyone will keep an _individual_ design notebook. This notebook documents
 your design process over the course of the project: important design decisions,
@@ -148,7 +148,7 @@ as:
      something about the design, implementation, or evaluation as a result?
 
 ## Project repositories 
-*Create these by Sunday, March 27 @ 11:59pm Pacific.*
+*Create these by Sunday, March 27 @ 11:59pm Pacific. (5%)*
 
 Your project will be spread out over three repositories: "project", "notebook",
 and "code". The sections below describe these repositories in more detail. Be
@@ -251,6 +251,10 @@ Place your **project plan** in the appropriate
     (e.g., finding a host language, implementing the semantics, the parser, 
     tools, etc)? Provide a brief schedule (e.g., with a deliverable every week) 
     for your project.
+
+**Contingency plan:** What obstacles (technical and logistical) might you
+    encounter while working on your project? How will you look out for them,
+    overcome them, or work around them?
 
 **Teamwork plan:** If you are working in a team, how do you plan to
     divide the labor? *Note: Each team member must work on every aspect
