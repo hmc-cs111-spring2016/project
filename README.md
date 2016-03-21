@@ -1,8 +1,4 @@
 
-TODO: 
-  update weights for milestones
-  make notebook
-
 [notebook-fork]: https://github.com/hmc-cs111-spring2016/project-notebook/fork
 [CS111-projects]: https://github.com/hmc-cs111-spring2016/hmc-cs111-spring2016.github.io/wiki/Project-links
 
