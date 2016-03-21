@@ -128,8 +128,7 @@ you know something about the domain? Can you think of good ways to evaluate the
 language? Are the users of the language being served by the current design and
 implementation?
 
-TODO: update
-Provide your critique in the appropriate file in the project's repository.
+Provide your critique in the appropriate file in the other project's repository.
 
 ---
 
