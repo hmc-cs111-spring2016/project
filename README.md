@@ -1,14 +1,15 @@
 
 TODO: 
   update weights for milestones
-  make notebook (in wiki?)
-  make critiques (in wiki)
+  make notebook
 
-TODO: update links
-[notebook-fork]: https://github.com/hmc-cs111-fall2015/project-notebook/fork
+[notebook-fork]: https://github.com/hmc-cs111-spring2016/project-notebook/fork
 [CS111-projects]: https://github.com/hmc-cs111-spring2016/hmc-cs111-spring2016.github.io/wiki/Project-links
 
-[Description]: ../../wiki/Project-description
+[Description]: documents/description.md
+[Plan]: documents/plan.md
+[DesignAndImplementation]: documents/design_and_implementation.md
+[Final]: documents/final.md
 
 # DSL projects
 
@@ -105,7 +106,6 @@ After the critique, you'll start your entry for the subsequent week
 with a summary and reflection of the critiques 
 ([see below](#critiques) for more details).
 
-TODO: update?
 To get started, [fork the notebook][notebook-fork] to your personal repository.
 Be sure to update the notebook each week before Sunday at 11:59pm and commit to
 the repository. A thoughtful, clear entry each week is good for your project,
@@ -163,7 +163,6 @@ file. There will be one forked project repository for each project (i.e.,
 each team that is working on a project). You've probably already forked this
 repository. **Be sure to submit a pull request** by the Sunday deadline.
 
-TODO: update?
 ### Notebook repository
 
 This repository contains your individual notebook. It is a [fork of a
@@ -213,7 +212,7 @@ This document is for you to collect and clearly convey the goals of your project
 and to convey how you plan to design, implement, and evaluate your DSL.
 
 Place your **project description** in the appropriate 
-[wiki page][Description]. It should address the following issues.
+[document][Description]. It should address the following issues.
 
 **Motivation:** Why is this project useful or interesting, what problem are you trying to
     address, and why is a DSL an appropriate solution?
@@ -242,7 +241,7 @@ separate files. Just be clear about where they are and what they mean.
     of things that your DSL will eventually be able to do. 
 
 Place your **project plan** in the appropriate 
-[[wiki page|Project-plan]]. It should answer the following questions.
+[document][Plan]. It should answer the following questions.
 
 **Language evaluation:** How will you know that your language has accomplished its goals? What
     tools, techniques, or measurements will you use to evaluate your language
@@ -267,7 +266,7 @@ Place your **project plan** in the appropriate
 This overview is a chance to reflect and get feedback on the important design
 and implementation decisions you've made so far. 
 
-Place your overview in the appropriate [[wiki page|Design-and-implementation]].
+Place your overview in the appropriate [document][DesignAndImplementation].
 It should address the following topics:
 
 **Language design.** Give a high-level overview of your language. Be
@@ -454,4 +453,4 @@ particular:
 -   If you worked as a pair, describe how you have divided your labor and
     whether that division has worked well.
 
-Place your writeup in the appropriate [[wiki page|Final-writeup]].
+Place your writeup in the appropriate [document][Final].
