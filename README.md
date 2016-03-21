@@ -44,16 +44,13 @@ These are the due dates for the milestones and project materials. Details appear
 after this section. The percentages next to each milestone is how much of the
 total project each milestone is worth.
 
-**Remember: there are no late days for project milestones. If work is
-late, you will receive no credit.**
-
   - [Design notebook](#user-content-design-notebook) (15%) Every Sunday @ 11:59pm Pacific,
       starting Sunday, March 27.
   - [Critiques](#user-content-critiques) (10%) Every Tuesday @ 11:59pm Pacific,
       starting Tuesday, March 29.
 
 
-  - [Project repositories](#user-content-repositories) (5%) Sunday, March 27 @ 11:59pm Pacific.
+  - [Project repositories](#user-content-project-repositories) (5%) Sunday,  March 27 @ 11:59pm Pacific.
   - [Project description and plan](#user-content-project-description-and-plan) (10%) Sunday, March 27 @ 11:59pm Pacific.
 
 
