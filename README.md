@@ -136,7 +136,7 @@ Provide your critique in the appropriate file in the project's repository.
 ### Your role as project owner
 
 In your notebook, you will also address the critiques of your own project. Each
-week, you should include a *summary* and a *reflection* of the critiques from
+week, you should include a *summary* and a *reflection* of the critique from
 the previous week. The summary provides a high-level description of the feedback
 and help your critic(s) provided. The reflection should answer questions such
 as:
