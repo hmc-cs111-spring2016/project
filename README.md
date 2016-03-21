@@ -8,6 +8,8 @@ TODO: update links
 [notebook-fork]: https://github.com/hmc-cs111-fall2015/project-notebook/fork
 [CS111-projects]: https://github.com/hmc-cs111-spring2016/hmc-cs111-spring2016.github.io/wiki/Project-links
 
+[Description]: ../../wiki/Project-description
+
 # DSL projects
 
 ## Overview
@@ -211,7 +213,7 @@ This document is for you to collect and clearly convey the goals of your project
 and to convey how you plan to design, implement, and evaluate your DSL.
 
 Place your **project description** in the appropriate 
-[[wiki page | Project-description]]. It should address the following issues.
+[wiki page][Description]. It should address the following issues.
 
 **Motivation:** Why is this project useful or interesting, what problem are you trying to
     address, and why is a DSL an appropriate solution?
