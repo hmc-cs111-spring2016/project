@@ -1,4 +1,4 @@
-# Project description and plan
+# Project description
 
 ## Motivation
 
