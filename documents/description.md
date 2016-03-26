@@ -12,7 +12,7 @@ As far as I can tell, there are few other DSL's for this domain. One of the best
 
 ## Language design
 
-
+The design of this language is to take exisitng syntax and put it into a more comprehensible form, both for the sake of writing and reading. A program in this language is a sequence of commands defining some movement with potentially more details regarding its effort, time, etc. When a program runs, a simulation of the motion notated is desplayed through a graphical 3d figure. A program coult take input like time, and then ouput the same movement but at different speeds. At this point, I am not sure which data structures or control flow ideas I should use. Something that could go wrong is that a program could contain contradictory movement (such as left arm forward and back at the same time). This type of error should be caught at compile-time before attempting to create the simulation. Some sort of error message specifying the contradiction would be useful. To avoid such errors, it should be difficult to give multiple values for a single attribute (such as an arm, etc) so that users won't accidently do these types of things.
 
 
 ## Example computations
