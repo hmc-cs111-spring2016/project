@@ -16,3 +16,7 @@ The design of this language is to take exisitng syntax and put it into a more co
 
 
 ## Example computations
+
+Here are is an example of a program that a user could run: A user could specify in the program that the whole body moves forward quickly while the right arm goes up lightly. This would result in a simulation of a person moving forward while their right arm goes up lightly. No other movements or characteristic would be depicted in the body. Since no effort quality was assigned to the body, the body will move with pre-assigned neutral quality. Similary, since no time quality was assigned to the right arm, it will move with a pre-assigned neutral quality.
+
+Another situation: A user might write the same program as above, but make it possible to input an effort quality for the body overall. This means that at runtime the simulation will be the same, except that the body will move with whatever effort quality is inputed. Note that this will not affect the light effort assigned to the right arm.
