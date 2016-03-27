@@ -7,7 +7,7 @@
 [DesignAndImplementation]: documents/design_and_implementation.md
 [Final]: documents/final.md
 
-# DSL projects
+# Josh Petrack's DSL Project
 
 ## Overview
 
