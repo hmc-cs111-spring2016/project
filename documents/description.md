@@ -26,10 +26,15 @@ Syntax errors would probably be something like calling a nonexistent file or mis
 ## Example computations
 
 I am not _totally_ sure what's being asked for in this question, but if, say, the program was given a ryhme scheme of "AABB*" and a text file, the program would: 
+
 1. Split up the text file by newlines, and then split each line into a list of words. The program would also eliminate "paragraph" breaks, though this may be something that is handled differently in the future.
+
 2. Store the word ending the first line. This word is important because it will be the rhyme of every other pair of lines.
+
 3. Verify that the word ending the second line rhymes with the word ending the first line.
+
 4. Store the word ending the third line (the "B" rhyme).
+
 5. Continue through the poem verifying the last words of every line rhyme with each other, and that the poem has the correct (divisible by 4) number of lines.
 
 For lines that do not rhyme, the poem could output something like: "Line 5 does not match rhyme scheme. Should rhyme with word x. Alternative words that rhyme include: [y, z, w]". It could also output something like: "Not enough lines in final stanza. Need x more lines which are in rhyme pattern ABB, as first A is included."
