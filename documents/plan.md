@@ -13,11 +13,16 @@ I will know that my language has accomplished its goals if it could parallel a f
 I've already more or less decided on the host language (Python). I feel like most of the time will be dedicated to deciding on semantics, actually implementing the semantics, and implementing the parser. Ideally I would want to provide some basic tools that will allow users to implement their own tools (e.g. define a new feature called amplify that increases bass and gain). Additional tools and perhaps a REPL interface could also be potential goals depending on how quickly the semantics and parser end up taking. 
 
 Here is a tenative schedule:
-*Week 1: Finish project details and plan
-*Week 2: Final decision on host language, packages, and additional technology choices. Have a complete and sketched out idea of the syntax design. Decide on the basic music-editing tools that will be built in. 
-*Week 3: Have the semantics more or less done, start on the parser (if not complete)
-*Week 4: Finish the parser and begin implementing aforementioned stretch goals / REPL interface
-*Week 5: Finish any backlogged Work on presentation for DSL and any finishing touches
+
+Week 1: Finish project details and plan
+
+Week 2: Final decision on host language, packages, and additional technology choices. Have a complete and sketched out idea of the syntax design. Decide on the basic music-editing tools that will be built in. 
+
+Week 3: Have the semantics more or less done, start on the parser (if not complete)
+
+Week 4: Finish the parser and begin implementing aforementioned stretch goals / REPL interface
+
+Week 5: Finish any backlogged Work on presentation for DSL and any finishing touches
 
 ## Contingency plan
 
