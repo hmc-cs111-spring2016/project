@@ -6,6 +6,8 @@
 
 ### What is the basic computation that your language performs (i.e., what is the computational model)?
 
+The user writes out a program describing movement. The language reads the program, figures out what movement is being depicted, and translates the movement so that it can be displayed by a graphical simulation.
+
 ### What are the basic data structures in your DSL, if any? How does a the user create and manipulate data?
 
 ### What are the basic control structures in your DSL, if any? How does the user specify or manipulate control flow?
