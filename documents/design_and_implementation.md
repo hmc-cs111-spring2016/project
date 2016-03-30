@@ -19,3 +19,11 @@
 ### Are there any other DSLs for this domain? If so, what are they, and how does your language compare to these other languages?
 
 ## Language implementation
+
+### Your choice of an internal vs. external implementation and how and why you made that choice.
+
+### Your choice of a host language and how and why you made that choice.
+
+### Any significant syntax design decisions you've made and the reasons for those decisions.
+
+### An overview of the architecture of your system.
