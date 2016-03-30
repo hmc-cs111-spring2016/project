@@ -1,0 +1,7 @@
+## Stuff in description.md
+One specific difficulty I think you might run into on the technical side (I think we already talked about it on Monday?) is dealing with what happens when a track changes length (from repeating sections or adding things from other tracks, or taking things out). On the back end, I think your best bet to deal with this will be to avoid modifying tracks in place--you'll probably have the least trouble if you represent the track as it originally was as well as the track with the
+user's modifications so far. Once you process all the user's modifications, you can write the file. I'm also thinking users might find it helpful to be able to define variables that refer to a particular section of a track.
+
+## Stuff in plan.md
+Generally speaking I think your ideas for how to evaluate your project are good--but I think they could do with a bit more specificity. Maybe pick a particular few basic functions you want to definitely incorporate, and be explicit about it. It'll probably make it easier on you as far as figuring out what you've already done and what you still need to do goes. I'd also just caution that while you may very well be right that most of your obstacles will be technical, you shouldn't
+assume that there won't be any logistical or otherwise abstract-level obstacles. You (and me and Milo and everyone else in the class) should probably test the language before you're done implementing it to make sure it's as easy to use as you want it to be.
