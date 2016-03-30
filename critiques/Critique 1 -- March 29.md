@@ -1,0 +1,9 @@
+## Critique
+
+In general, I'm not nearly as familiar with the backend implementation details of your project, so I'll probably focus more on the language design details. 
+
+In terms of that, I have two main concerns for the project. The first is essentially that you will need to find a balance between this being a dsl and it being a full language. You mentioned that you probably won't have control flow statements, in which case the sample computations that you gave seem just like ways to access data only. If this is the case, I don't quite see what the context will be for using the language - if it will be something like an API for data accessing, and then the user would write code in whatever language they were planning on using anyway, or something else. I think concrete use cases are the thing that I'd want to see the most of, because in general the languages I've used in this domain are terrible to work with, so this could be really awesome. 
+
+My second concern is how usable it will be in terms of performance, while still being a nice language to write code in. When I've used programming languages or packages for parallelism, they typically totally suck to use, because they make people specify exactly how everything is parallelized. Since your DSL has some simple language commands (like .sum()) and then figures out how to best make this work, it seems like it might be very hard to either make the language stay as simple as you've described, but also perform well. 
+
+I think both of these concerns will be totally fine once I have a better idea of the context for running programs in the language, as well as some more examples of computations that can be done. 
