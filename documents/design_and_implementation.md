@@ -4,17 +4,27 @@
 
 ### How does a user write programs in your language (e.g., do they type in commands, use a visual/graphical tool, speak, etc.)?
 
+There will be a visual/graphical tool. I haven't decided exactly what it should look like, but I think given the visual nature of movement it makes more sense to write it out as a visual language.
+
 ### What is the basic computation that your language performs (i.e., what is the computational model)?
 
 The user writes out a program describing movement. The language reads the program, figures out what movement is being depicted, and translates the movement so that it can be displayed by a graphical simulation.
 
 ### What are the basic data structures in your DSL, if any? How does a the user create and manipulate data?
 
+If there are overall conditions for the movement (everything is at a low level, all leg movements are done in turnout, etc), then there should be a structure to indicate what the definition of "neutral" is for the movement phrase. Otherwise, the user is specifying for particular amounts of time how the body should move, so data will be stored with respect to body part and time. There should be a hierarchy of body parts (from entire, to core, to arms/legs, to feet/hands, etc) so that the conditions trickle down to the smaller sections of a body part.
+
 ### What are the basic control structures in your DSL, if any? How does the user specify or manipulate control flow?
+
+Maybe I sort of answered this in the above question, but 
 
 ### What kind(s) of input does a program in your DSL require? What kind(s) of output does a program produce?
 
+If the user wants there to be room to experiment with different qualities, there could be room to leave characterstics like effort and levels open. It would be harder to do so with specific body parts. The output is a 3d simulation of the movement, so that the user can get a sense of what the phrase they programmed looks like.
+
 ### Error handling: How can programs go wrong, and how does your language communicate those errors to the user?
+
+
 
 ### What tool support (e.g., error-checking, development environments) does your project provide?
 
