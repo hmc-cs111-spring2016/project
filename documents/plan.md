@@ -1,7 +1,7 @@
 # Project plan
 
 ## Language evaluation
-At a bare minimum, the DSL will need to be able to load and unload data to and from something and perform basic math operations on all elements in the vector. However, I expect that any decent implementation will have a lot more to it than that and will have more of the "fancy" features outlined in the description. Example code can be used to verify functionality (that the DSL does what it should using the given syntax) and benchmarks can verify that we are getting a performance increase over a standard implementation. I figure I will also get feedback on my syntax from my critique group as well.
+At a bare minimum, the DSL will need to be able to load and unload data to and from on object or location in memory and be able to perform basic math operations on all elements in the vector. However, I expect that any decent implementation will have a lot more to it than that and will have more of the "fancy" features outlined in the description. Example code can be used to verify functionality (that the DSL does what it should using the given syntax) and benchmarks can verify that we are getting a performance increase over a standard implementation. I figure I will also get feedback on my syntax from my critique group as well.
 
 ## Implementation plan
 I already have a host language: C++. The library I want to work with to do parallel computations requires it and I figure C++ programmers would appreciate a performance-oriented DSL. Since this will be an internal DSL, I won't need to bother with parsers either. However, it does mean I will have to work within the confines of C++ (classes, templates, operator overloading, etc.) to integrate my DSL as well as I can into C++.
