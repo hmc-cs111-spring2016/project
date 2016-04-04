@@ -32,14 +32,22 @@ If the user wants there to be room to experiment with different qualities, there
 
 From my original description: As far as I can tell, there are few other DSL's for this domain. One of the best known ones is DanceForms (see http://www.charactermotion.com/), which was often used by modern choreographer Merce Cunningham. However, as far as I can tell, this software is not well maintained. Another popular movement software is Isadora (see http://troikatronix.com/). However, it looks like this is more for use in projections with dance rather than simulation of dance movement. There seem to be quite a few straight Labanotation softwares, but they don't seem to deal with the problem of Labanotation's complexity. 
 
-From current research: I found a DSL that requires use of a palm pilot...
+From current research: I found a DSL that requires use of a palm pilot...if it wasn't obvious why this project could be useful I hope it now is...
 
 ## Language implementation
 
 ### Your choice of an internal vs. external implementation and how and why you made that choice.
 
+I will be making an external implementation. Honestly, it's because I can't think of any way to make this an internal DSL. Also, since I want to have a more graphical interaction with the language, I think an external DSL is just more natural.
+
 ### Your choice of a host language and how and why you made that choice.
+
+I'll be working in Python, because of the easiness of modeling with vpython. My plan is to start with a simple ball/joint model of human movement. I think it'll be much easier to get something worked out in vpython than to try to jump into a complex animation system with super smooth and realistic rendering. I would however like to maybe demo what a realistic animation could look like, so if time permits I'd like to look into making a model with Maya. 
 
 ### Any significant syntax design decisions you've made and the reasons for those decisions.
 
+Probably the most significant syntax design decision is the idea of being graphically based. I've uploaded a picture to my design notebook of one possibility of what this could look like, and I have more ideas running around in my head of different ways to improve it.
+
 ### An overview of the architecture of your system.
+
+
