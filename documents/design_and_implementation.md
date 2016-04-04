@@ -16,7 +16,7 @@ If there are overall conditions for the movement (everything is at a low level, 
 
 ### What are the basic control structures in your DSL, if any? How does the user specify or manipulate control flow?
 
-Maybe I sort of answered this in the above question, but 
+Maybe I sort of answered this in the above question, but the control really comes from the neutral overall definition down. The hierachy of rules based on time and body part will decide which movements execute when and what sort of qualities they have. 
 
 ### What kind(s) of input does a program in your DSL require? What kind(s) of output does a program produce?
 
@@ -24,9 +24,11 @@ If the user wants there to be room to experiment with different qualities, there
 
 ### Error handling: How can programs go wrong, and how does your language communicate those errors to the user?
 
-
+If a user specifies conflicting ideas or anatomically impossible ideas, then the program would have a problem. However, I hope to have a gui such that making these sorts of decisions would be impossible to do (such as if you have the the left leg defined to be going forward, there is no way to also define it to be going backwards at the same time).
 
 ### What tool support (e.g., error-checking, development environments) does your project provide?
+
+The development environement will have mild visualizations so that the user can be more visual in specifying a phrase.
 
 ### Are there any other DSLs for this domain? If so, what are they, and how does your language compare to these other languages?
 
@@ -50,4 +52,4 @@ Probably the most significant syntax design decision is the idea of being graphi
 
 ### An overview of the architecture of your system.
 
-
+The user will use the gui to design a movement phrase. This will affect what the "neutral" is, in addition to displaying a sequence of movements. This is translated so that the 3d simulator can show a model of the movement.
