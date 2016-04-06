@@ -114,8 +114,6 @@ Although this isn't a great reason, and I haven't used all of these libraries pe
 I will say I have used Thrust in the past to great success.
 
 
-
-
 ##### Revisiting Points from Monday
 
 ###### Reduce vs Foldl/Foldr
@@ -132,4 +130,5 @@ Source:
    * http://stackoverflow.com/questions/25158780/difference-between-reduce-and-foldleft-fold-in-functional-programming-particula
 
 ###### Ternary operator
-
+As mentioned in class, `A.choose(B,C)` is a clean/intuitive way to try to do a parallelize the
+ternary operator. I personally like this option the most out of the options we discussed.
