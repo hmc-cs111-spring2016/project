@@ -1,7 +1,4 @@
-
-
-import AbstractSyntax.QueryAST._
-
+package scalaSQL
 
 class SQLSet[A <% SQLTuple](val op : Operation) {
 
@@ -15,7 +12,6 @@ object SQLSet {
         new SQLSet[A](Relation(table_name, attributes))
     }
 }
-
 
 abstract class SQLTuple() {
     val attributes : List[Attribute[_]]

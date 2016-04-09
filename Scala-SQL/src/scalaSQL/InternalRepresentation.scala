@@ -1,7 +1,7 @@
-package AbstractSyntax
 
-package object QueryAST {
-    
+import scala.Left
+
+package object scalaSQL {
 
     abstract class Operation
     case class Relation(val name : String, val attributes : List[Attribute[_]]) extends Operation

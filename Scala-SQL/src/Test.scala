@@ -1,6 +1,6 @@
 
-import AbstractSyntax.QueryAST._
-import AbstractSyntax.QueryAST.SQLType
+import scalaSQL._
+
 
 object Test extends App {
 
