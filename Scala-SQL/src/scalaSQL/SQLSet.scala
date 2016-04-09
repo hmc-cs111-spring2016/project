@@ -8,11 +8,11 @@ class SQLSet[A <% SQLTuple](val op : Operation) {
 }
 
 object SQLSet {
-    def apply[A <% SQLTuple](table_name : String, attributes : List[Attribute[_]]) = {
+    def apply[A <% SQLTuple](table_name : String, attributes : List[FieldName[_]]) = {
         new SQLSet[A](Relation(table_name, attributes))
     }
 }
 
 abstract class SQLTuple() {
-    val attributes : List[Attribute[_]]
+    val attributes : List[FieldName[_]]
 }

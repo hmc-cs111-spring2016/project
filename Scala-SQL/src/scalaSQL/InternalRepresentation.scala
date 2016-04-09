@@ -3,38 +3,41 @@ import scala.Left
 
 package object scalaSQL {
 
-    abstract class Operation
-    case class Relation(val name : String, val attributes : List[Attribute[_]]) extends Operation
-
-    class Attribute[T <% SQLType](val name : String) {
-        def == (that : Either[Attribute[T], T]) = ETComparison(Left(this), that)
-        def != (that : Either[Attribute[T], T]) = NotCondition (this == that)
-        def > (that : Either[Attribute[T], T]) = GTComparison(Left(this), that)
-        def < (that : Either[Attribute[T], T]) = LTComparison(Left(this), that)
-        def >= (that : Either[Attribute[T], T]) = OrCondition(this > that, this == that)
-        def <= (that : Either[Attribute[T], T]) = OrCondition(this < that, this == that)
-    }
-
-    class SQLType(val value : Any)
+    abstract class Field[T <% Comparable[T]]
     
-    object SQLType {
-        implicit def fromInt(i : Int) = new SQLType(i)
-        implicit def fromString(s : String) = new SQLType(s)
+    class FieldName[T <% Comparable[T]](val name : String) extends Field[T] {
+        def == (that : Field[T]) = ETComparison(this, that)
+        def != (that : Field[T]) = NotCondition (this == that)
+        def >  (that : Field[T]) = GTComparison(this, that)
+        def <  (that : Field[T]) = LTComparison(this, that)
+        def >= (that : Field[T]) = OrCondition(this > that, this == that)
+        def <= (that : Field[T]) = OrCondition(this < that, this == that)
     }
+
+    class FieldValue[T <% Comparable[T]](val value : Any) extends Field[T]
+    
+    object FieldValue {
+        def apply[T <% Comparable[T]](value: T) = new FieldValue[Int](value)
+        
+        implicit def fromInt(i : Int) = FieldValue[Int](i)
+        implicit def fromString(s : String) = FieldValue[String](s)
+    }
+    
+    abstract class Operation
+    case class Relation(val name : String, val attributes : List[FieldName[_]]) extends Operation
 
 
     abstract class Condition
-    case class GTComparison[T](left :Either[Attribute[T], T], right : Either[Attribute[T], T]) extends Condition
-    case class LTComparison[T](left :Either[Attribute[T], T], right : Either[Attribute[T], T]) extends Condition
-    case class ETComparison[T](left :Either[Attribute[T], T], right : Either[Attribute[T], T]) extends Condition
+    case class GTComparison[T](left : Field[T], right : Field[T]) extends Condition
+    case class LTComparison[T](left : Field[T], right : Field[T]) extends Condition
+    case class ETComparison[T](left : Field[T], right : Field[T]) extends Condition
     case class NotCondition(cond : Condition) extends Condition
     case class AndCondition(left : Condition, right : Condition) extends Condition
     case class OrCondition(left : Condition, right : Condition) extends Condition
 
     
-    
     abstract class UnaryOperation extends Operation
-    case class Projection(val attributes : List[Attribute[_]], val op : Operation) extends UnaryOperation
+    case class Projection(val attributes : List[FieldName[_]], val op : Operation) extends UnaryOperation
     case class Selection(val cond : Condition, val op : Operation) extends UnaryOperation
 //    case class Rename(val start : Attribute[Any], val end : Attribute[Any], val op : Operation) extends UnaryOperation
     
@@ -47,15 +50,7 @@ package object scalaSQL {
     
     
     
-    case class Query(val attributes : List[Attribute[_]], table_name : String, condition : Option[Condition] = None) {
-        override def toString = {
-            val attribute_names = attributes.map { x => x.name }
-            val select = "SELECT " + attribute_names
-            val from = "FROM " + table_name
-            val where = "WHERE " + condition.toString()
-            select + "\n" + from + "\n" + where
-        }
-    }
+    case class Query(val attributes : List[FieldName[_]], table_name : String, condition : Option[Condition] = None)
 
     def toQuery(op: Operation) = op match {
         case r : Relation => relationToQuery(r)
@@ -80,9 +75,5 @@ package object scalaSQL {
             case Some(c) => Some(AndCondition(c, s.cond))
         }
         Query(original.attributes, original.table_name, new_condition)
-    }
-    
-           
-        
-        
+    }   
 }
