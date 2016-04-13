@@ -1,0 +1,24 @@
+Keep up the good work Milo! It seems you're making a lot of progress every week. Again, I'll reiterate a few things that we discussed in class with regards to the questions in your design notebook.
+
+## Parsing error vs Semantic error
+To address the parsing error vs semantic error that you talk about in the first part of the notebook, I think it's not a huge deal to return a parse error vs semantic error. Regardless of which one you return, the user shouldn't be able to input an invalid range. Honestly, I think as long as you are descriptive enough in the errors that you return to the user, it's fine. 
+
+## Note-lenghts
+I agree that this feature sounds like more work than should be necessary. I personally think that your DSL, as of now, is already extremely feature rich, so the loss of this functionality won't be too noticable. In addition to being feature rich, I also think that you pretty much have covered all the basic functionality that users in your domain might want, as well as functionality that separates your DSL from other similar note-generating tools. 
+
+## Questions
+As discussed in class, both Aaron and I really like your idea for creating rhythm, and the algorithm you've developed seems relatively easy to implement. However, I'd warn against sinking too much time in this as it seems mostly involved in the back-end. As a suggestion, you can try implementing your algorithm non-recursively to see whether or not it works for just the first note of the first measure(just to see if you can do it), and then adding the recursive features afterwards. I think it's a neat stretch-goal to have that you could work on while working on other more language-y aspects. In particular, as I told you in class, I think the UI feature would be a neat addition to your DSL and would definitely be one of the more language-heavy features. As a reminder, for the UI:
+
+* Display all the possible with sliders / choices 
+* In particular, for the absRange, it would be a cool idea to have 2 sliders that can't go past each other on the musical scale.
+* Have a button of some sort to add additional staves that also displays the flags
+* Because the GUI will probably be the more user-friendly alternative, you can remove a few of the flags later on and have them default to something while having an "Advanced" button or something to show all those flags. 
+
+### User Feedback
+With regards to the better feed-back, I think it would be a great feature, though I don't think it's possible to do simply with the textarea element in HTML without an annoying amount of Javascript behind the scenes. I'd look into these [two](http://codemirror.net/) [sources](https://ace.c9.io/#nav=about). Although they're geared more towards syntax highlighting for existing language, I think they both can be enhanced and integrated. You would need to probably write a syntax highlighting plugin, for which I'd probably suggest using Ace just because it's better documented. They're both "editing-components," so as is they probably do what you want. I'm not exactly sure where this feature would fall on the langauge design to back-end spectrum, but it feels more to do with the langauge design than the rhythm generation feature. As such, I think it's definitely the first thing you should look into once you get the UI features working. 
+
+### Misc
+As for a better name for "polyphony", maybe "chord #"? Not exactly the best versed in music haha. Similarly, for "absRange," it might be easier for users to simply write "absolute range." However, I think because you (will) have the UI version in addition to the text version, it's not worth worrying excessively about how "user-friendly" the syntax might be. Afterall, I think we agreed that those who are not looking for any super complicated music generation will simply use the UI feature, as it will probably be the most user-friendly of the two. Additionally, if the UI feature is implemented in good faith, I think it'll be impossible to encounter any of the issues you might run in with the text editor version. For example, if you use the slider design described above, it would be impossible for users to encounter the min-max range error. As such, it might be a good idea to put some thought into how these UI elements might be designed to minimize (ideally to 0) the number of errors a user can encounter while using the UI feature. 
+
+### Priorities
+To reiterate (and address your last question), I think it's best to prioritize (in order) the UI feature, better feedback, MIDI integration, and rhythm generation on the side. I really like the MIDI integration, and I think it's a pretty important part of the DSL, as we discussed in class. I think it's an important aspect of the "experience" for users to be able to verify whether or not they're sight reading correctly. 
