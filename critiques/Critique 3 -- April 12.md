@@ -131,3 +131,45 @@ replaced with the `xrange` of Python 2.7.
 One of the big advantages of the JSON data format is its human readability. Unfortunately, as
 it currently resides in your repo, all your data files contain no newlines. You might consider
 running an auto formatter on the data so users can read through the data files more intuitively.
+
+
+
+
+
+### Addressing Questions
+
+#### Usable Language
+It seems like your language is on the way to becoming more usable. As we discussed in class,
+there several logicistics regarding keywords like `of` and `and` in your DSL that conflict
+with item names like "Sange and Yasha" and "Keeper of the Light". I believe, although one
+could argue this hurts the readability and accessibly of your language to non-programmers,
+that rather than using English words like `of` and `and` as delimiters for your arguments,
+you should go for characters like `|` or `,`. Not only are these still readable, but they
+also "look cool."
+
+#### Adding to Lists
+Like the above point, I would suggest using a delimiter like `->` or `=>` instead of `to`
+to avoid possible name conflicts. Thus, something like `add build1 to carry_builds` could
+appear as `build1 -> carry_builds`. This syntax is nice (in my opinion) since it still
+seems to make sense to non-programmers.
+
+#### Handling Skills
+You're right. There is too much variety to conveniently implement all the hero spells.
+That being said, there are many spells that share themes. For example:
+   * Stun
+   * Ministun
+   * Channel
+   * Inflict Magical/Physical/Pure Damage
+   * Movement Speed Boost/Slow
+   * Increase/Decrease Armor
+   * Increase/Decrease Damage
+   * Manaburn
+   * Illusionn
+   * Disarm
+   * Purge
+   * Increase Magic Resist
+   * Etc.
+
+If you choose to implement a subset of these as "skill effects", I believe you handle
+a large portion of skills by simply adding these effects with arguments to a "skill
+container". Feel free to talk to me about this idea if you want more details.
