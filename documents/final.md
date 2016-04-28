@@ -72,7 +72,7 @@ They could modify this file with their individual tasting notes. Each category w
 
 To generate the JSON object for this wine, the user would type `swirl riesling` into the Terminal. They may encounter errors if attributes are formatted incorrectly or there are new lines at the tasting notes file. If this is the case, they can re-enter the command `sniff riesling` until they can correctly swirl the wine. They would then type `sip riesling` to open a new browser with the following visualization:
 
-![riesling1](https://goo.gl/photos/9LMfjKNzvuSxLWgK6 "Bar Graph Visualization")
+![riesling1](riesling-bar.png "Bar Graph Visualization")
 
 If the user wants to specify an alternative visualization type for a particular category, they can add modify "index.txt". In this case, if the user wants to visualize the wine profile as a pie chart instead of a bar chart, they can include the line `special_attrs["profile"] = "pie"` in the "Special Visualization Behavior" section of the file. That would produce the following visualization:
 
