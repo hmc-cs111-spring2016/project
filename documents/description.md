@@ -2,7 +2,7 @@
 
 ## Motivation
 Scala Collections provide a wide range of useful functions for operating on 
-lists of objects. These functions include _map_, _filter_, _fold_ an many more. 
+lists of objects. These functions include `map`, `filter`, `fold` an many more. 
 SQL query languages however, despite being representable by a collection of 
 tuples, lack most of these very useful functions. This can result in many over-
 complicated SQL queries. The goal of this project is to augment the experience 
@@ -31,9 +31,9 @@ For this reason, I will probably stick with just throwing exceptions for a bad
 database action. 
 
 ## Example computations
-A good example for this language is translating an Scala Collections _filter_
+A good example for this language is translating an Scala Collections `filter`
 operation into a SQL _SELECT_ operation. For example if you wanted to filter 
-tuples where the _id > 10_. That would be equivalent to _SELECT * WHERE id > 10_.
+tuples where the `id > 10`. That would be equivalent to `SELECT * WHERE id > 10`.
  
 
 
