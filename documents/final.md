@@ -98,46 +98,12 @@ Error messages are handled in a separate file for increased modularity and clari
 
 I don't think the language is particularly DSL-y. There isn't really much of a language component here; the syntax is limited to three commands. This is important and intentional, considering the target audience as I've done throughout, but it means that it doesn't really feel like it's own language necessarily. Also, because an interpreter is instantiated, and then commands are called using that instance (i.e. `interpreter.checkPattern()`), it feels more like simple OOP than actual DSL-ness. That said, I did have DSL principles in mind throughout the design and implementation process, and I think that helped me produce better (more modularized, more clear) code and will help with extensibility if I keep working on this in the future.
 
+I'm really pleased that I was able to create something that really works. The weakest part of the existing functionality is the API; because the API does not return *all* possible rhymes for a given word, the program sometimes fails on word pairs that are obvious rhymes (for example, "bell" and "DSL"). Still, I was please I was able to create something novel that doesn't exists in any form and is actually somewhat useful (in a narrow scope). I even had time at the end to implement syllable counting, which was a stretch goal; I opted to make the existing functionality more robust, and avoid complicating the program further. I couldn't think of a good way to add the syllable counting while keeping the syntax simple, and eventually opted against it.
 
+There are still some error messages/ tiny edge cases which are not great. For example, if the poem has three rhyme assignments but the rhyme scheme only expects two, this should error out before even checking the poem against the scheme; however, I haven't found a way to do this and still provide as helpful a error message as is provided by checking the poem against the scheme. I kept this functionality in the code, but commented out where it is called. I also do want to have syllable counting; this would make it possible to add more complicated restrictions, and force poems to truly match certain schemes, like limericks or sonnets; however, I couldn't think of a way to do that without really adding a lot of copmlexity to the syntax. Still, I do think it should be in there somehow, because the rhyme checking is the only functionality right now that's helpful, and to check poems more holistically, you do need syllable checking. 
 
+In looking back at my evaluation plan, the biggest flaw right now is that my project is not well tested. I had good intentions to really do TDD, but once the switch from Scala to Python and the re-conceiving of regex's for scheme handling took way more time than expected, my good practices kind of fell by the wayside. I'm disappointed about this, and wouldn't be surprised if I missed some edge cases somewhere out of negligence. Hope not, but this is probably the biggest code-practices flaw in the way this language was implemented. I did get an MVP done the same week I hoped to, and was able to work on robustness after that, which I'm quite happy about.
 
+As alluded to above, the biggest issue I ran into was in using regular expressions for scheme handling. I tried to use Python's re class, but it had way more functionality than I needed, and wasn't actually very helpful in producing output in the way that I wanted it. After about a week of fumbling around with it, I decided to implement on my own only the functionality that I needed -- parenthesized segments of rhyme schemes. I was also able to change the syntax to simplify it, because I was implementing it myself; this was definitely the one upside to the ordeal. However, if I eventually want to implement additional regular expression functionality for whatever reason, it would probably be much harder, as I ended up abandoning the existing Python library.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+I'm so happy I got the chance to work on this project! It was so fun, and I'm really proud of my work! I want to also thank my critique group, Josh P. and Hannah, who were instrumental to the design and functionality decisions that ended up shaping the project. 
