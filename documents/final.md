@@ -38,7 +38,45 @@ Incorrect number of lines for specified rhyme scheme!
 
 Seeing that the number of rhymes was not correct, the user could then remove the last line from simple.txt and run the same command again. This time, the output would be:
 
+```
+checking "simple.txt" on aaba
+Valid rhyme scheme!
+Correct number of lines for specified rhyme scheme.
+Checking rhymes for line number 1
+Checking rhymes for line number 2
+Checking rhymes for line number 3
+Checking rhymes for line number 4
 
+Poem did not match specified scheme!
+
+Incorrect line is line 4, with last word: blue
+The scheme expects the word to match the 'a' rhyme pattern
+As such, the last word on the line should rhyme with how
+Here are some rhyme suggestions that match with that word: 
+sow, bow, now, allow, cow, endow, disavow, wow, plow, vow, bough, kowtow, plough, scow, tao, ciao, thou, avow, chow, brow
+Current letter assignments: {
+    "a": "how", 
+    "b": "brown", 
+    "c": "blue"
+}
+```
+
+Seeing that line 4 does not match, the user could then change the last word in line 4 from "blue" to one of the words suggested, say "cow," and re-run the program. The output would become:
+
+```
+checking "simple.txt" on aaba
+Valid rhyme scheme!
+Correct number of lines for specified rhyme scheme.
+Checking rhymes for line number 1
+Checking rhymes for line number 2
+Checking rhymes for line number 3
+Checking rhymes for line number 4
+The poem matches the scheme! Great work!
+```
+
+Notice that the user runs the same command every time, which makes it easier to use and become familiar with. 
+
+The user can also save a scheme, using the addForm command: `addForm("(a)ba", "simpleForm"). Then, the user could use `checkForm("simple.txt", "simpleForm") and have the same output as above. The form could be input as `aaba` or `(a)ba`; both would return the same output.
 
 ## Implementation Details
 
