@@ -91,3 +91,30 @@ For programs that use the same operation on the same data types, this can signif
 Another optimization my DSLs uses is it stores all data on the GPU.
 This means that when a computation needs to be performed, the data will already be ready to go and the computation can be started immediately.
 If data on the GPU needs to be updated or the program requests data from the vector, only the needed data is transfered, which is much faster than maintaining copies on both the CPU and GPU and keeping both up-to-date.
+
+## Evaluation
+
+My DSL is somewhere between a general-purpose language and a "true" DSL.
+Since it is designed for vector parallel problems, it can perform a wide varity of computations and may even be Turing complete.
+In the most extreme case, single-element vectors could actually be used as scalars for all kinds of general purpose computations.
+However, in regular use, my DSL should compliment the general-purpose features of C++ instead than compete with them.
+Users should hopefully find that they can eliminate some for loops in their code while also getting the advantage of using a GPU for parallel operations.
+
+As of right now, I am most proud of how easy it is to do operations on vectors.
+You can practically treat them like scalars when doing computations, which is really convenient.
+I think this DSL (or a DSL like this) would be quite helpful for solving problems that can be solved using verctor parallelism.
+
+Unfortunately, there is still a lot of room for improvement.
+The biggest issue right now seems to be performance.
+On my comptuer, performance results seem backwards.
+My dedicated GPU runs slower than my weaker integrated GPU, which already runs slower than my multicore CPU.
+While neither of the GPUs on my computer are particularly powerful, they should both be faster than my CPU, especially for vector parallel problems.
+Sinec this is my first time actually using OpenCL, perhaps this is due to me misunderstanding how exactly it works.
+The performance problem could also be due to issues with memory allocation and copying being slower on the GPUs than on the CPU.
+However, this should not have been a problem for the keys example program as there should be very little data movement between the CPU and GPU.
+
+There are also a lot of operations that could be added. As mentioned earlier, float methods have not been added yet (e.g. `sqrt()`). I also never got around to implementing a parallel scan method either, but this would be difficult to do well and is not used very often. Finally, I'm not sure if my code currently supports every assignment operator or working with const vectors very well. However, none of these prevented me from writing the example programs included, meaning the DSL is at least functional on a basic level.
+
+One very important feature that really should be added is support for vector / scalar operations. Currently my DSL requires creating a vector from a scalar, which is very inefficient. However, I am not sure how easy this would be with operator overloading in C++ or implicit conversions.
+
+Revisiting my original evaluation, I accomplished far more than the minimal goals I set for myself (except for getting good performance). Since this was my first experience creating a large C++ library and my first time really using OpenCL, I ended up learning quite a bit about what I could and could not (easily) do along the way and and am glad I was able to accomplish what I did. Unfortunately this did mean that my vision for this DSL had to change from what I originally envisioned (a complete `std::vector` replacement). Regardless, I hope the example programs show just how powerful and simple this DSL can be.
