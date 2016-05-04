@@ -1,0 +1,11 @@
+I think I'll start by agreeing with what you wrote in your project notebook -- I think your project is in a great place. It's easy to use, there is a boatload of functionality (I know you're worried that it's too much, but I'm actually not) and now it actually creates the mp4's as desired. I think this is an excellent project and it's pretty close to done, bravo.
+
+Most of my comments are similar to those I had when we did demos to each other in class on Wednesday (I'm pretty sure it was Wednesday), because I understand the project hasn't changed too much since then. I think that the program is great, and there are small things (rule lifetimes, primitives disappearing after a certain number of frames, and so on) that could unsubstantially improve the project. With that in mind, I think it may perhaps be most helpful for me to just answer the questions bits of your project notebook.
+
+As for what your final product should look like: I think trying to get it to a directly executable state a la context free is definitely not worth the hassle. This seems like all sorts of formatting and similar stuff that doesn't really further your DSL learning. I think, now, it's all about incremental upgrades to usability, with a focus on having the syntax be as simple to use as possible -- for example, making sure a user can type 0.9 as well as .9, or something like that.
+
+I don't think there's anything glaring at all. I'm happy that you now have your system actually create the animation rather than a bunch of images. I guess it would be nice to have more good error messages, as you told me today that you were doing, but not too much beyond that. For example, catching missing colons without some scary long message (which I think happened last week) would be super helpful I think.
+
+I think the one thing that I would think about is the number of different categories for things you have. For example, primitives, rules, shapes, start times, and so on. I think we've talked a little about this but I think the one place in which functionality could get bloated really fast is by continuing to add these categories. I think the current number of categories is totally manageable and sufficient, and I'd be careful to add more unless you thought it was absolutely necessary.
+
+Great job with this project. The language is really quite fun to use.
