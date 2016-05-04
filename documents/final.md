@@ -56,6 +56,14 @@ To rotate elements to the left, a negative number can be used with the rotate fu
 
 Finally, my DSL supports almost all scalar datatypes. It can operate on 8, 16, 32, and 64 bit integers (both signed and unsigned), boolean values, and 32 bit floating point numbers. Unfortunately, the backend used to implement my language does not always support 64 bit floats (also known as doubles in some languages), so my DSL cannot universally support them.
 
+## Example Programs
+
+Three example programs are included with the DSL. The tests program checks to make sure each method and operator is working at least on a basic level. It is also useful for seeing all the possible things you can do with the DSL.
+
+The kmeans program does a simple kmeans (unsupervised machine learning) calculation with two centroids. If the program is working correctly, the centroids should generally converge on two different locations (which would normally represent the centers of two clusters of 2D data).
+
+The keys program breaks a very simple (~50 bit) key made up of two "large" prime numbers through brute force. This is an ideal problem for vector parallelism as we can many potential numbers to see if they are one of the two primes in the key.
+
 ## Language Implementation
 I chose to implement my DSL in C++ as many C++ programmers are concerned about performance and would likely enjoy better ways to write parallel code.
 One advantage of using C++ is that it supports operator overloading, which allows vector objects to share the same operators as scalar values.
