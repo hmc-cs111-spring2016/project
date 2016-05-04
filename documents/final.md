@@ -25,13 +25,18 @@ All of these features should combine to make using my DSL much easier than other
 
 ## Language Design
 My DSL revolves around vectors which contain arbitrary numbers of ordered scalar values.
+Data can be copied into and out of my DSL's vectors through a variety of ways.
+Vectors can be initialized with a constant value or from the contents of another data structure by iterator or pointer (or directly from `std::vector`s).
+Elements within a vector (including entire ranges of elements) can also be modified or read from in a similar fashion through the `get` and `set` methods.
+Vectors also support the accessor operator, but only for reading. This could be changed in a future update, however this would come at the cost of any references to elements in the vector becomming invalid anytime a computation is performed on it.
+
 Most of the operations users can perform on vectors are element-wise, meaning they operate on just the corresponding elements of all the vectors involved.
 In a declarative language, these operations could be performed by storing all the values in arrays and performing the operations in a for loop that loops over every element.
 In a functional language, these operations could be performed by storing all the values in lists and mapping the operation onto eacn element in the lists.
 Currently, users can perform any common integer, logical, or bitwise operation on vectors in my DSL.
 For example, vectors can be operated on element-wise with addition, logical and, XOR, shifts, and many other operations.
 Element-wise operations on vectors look idential to their scalar equivalents in the host language.
-So, `a + b` is just as valid if `a` and `b` were integers or vectors of integers.
+So, `a + b` is just as valid regardless of whether `a` and `b` are integers or vectors of integers.
 My DSL also includes a form of the ternary and filter operations.
 Due to the constrainst of the host language, the ternary operator is the only element-wise operator that differs between scalars and vectors.
 Instead of looking like `a ? b : c` (or  `if (a) then b else c)`, it is written as `a.choose(b,c)`.
@@ -49,3 +54,4 @@ To rotate elements to the left, a negative number can be used with the rotate fu
 Finally, my DSL supports almost all scalar datatypes. It can operate on 8, 16, 32, and 64 bit integers (both signed and unsigned), boolean values, and 32 bit floating point numbers. Unfortunately, the backend used to implement my language does not always support 64 bit floats (also known as doubles in some languages), so my DSL cannot universally support them.
 
 ## Language Implementation
+
