@@ -24,3 +24,28 @@ It doesn't make them grapple with any of the intricacies of parallel devices and
 All of these features should combine to make using my DSL much easier than other competing languages and libraries.
 
 ## Language Design
+My DSL revolves around vectors which contain arbitrary numbers of ordered scalar values.
+Most of the operations users can perform on vectors are element-wise, meaning they operate on just the corresponding elements of all the vectors involved.
+In a declarative language, these operations could be performed by storing all the values in arrays and performing the operations in a for loop that loops over every element.
+In a functional language, these operations could be performed by storing all the values in lists and mapping the operation onto eacn element in the lists.
+Currently, users can perform any common integer, logical, or bitwise operation on vectors in my DSL.
+For example, vectors can be operated on element-wise with addition, logical and, XOR, shifts, and many other operations.
+Element-wise operations on vectors look idential to their scalar equivalents in the host language.
+So, `a + b` is just as valid if `a` and `b` were integers or vectors of integers.
+My DSL also includes a form of the ternary and filter operations.
+Due to the constrainst of the host language, the ternary operator is the only element-wise operator that differs between scalars and vectors.
+Instead of looking like `a ? b : c` (or  `if (a) then b else c)`, it is written as `a.choose(b,c)`.
+The `filterBy` method, written as `A.filterBy(b)` generates a new vector that only includes the elements from `A` if the corresponding element in `B` is `true`.
+The order and number of elements in the returned vector are not guaranteed to be the same as the original vectors.
+While floating point methods are not currently supported (like max, min, rounding, or power functions), they could be added in a future update.
+
+My DSL also supports a few handy operations that involve more than one element from the same vector.
+These operations are `A.sum()`, `A.product()`, and `A.rotate(b)`.
+`Sum` and `product` compute the sum and product of all the elements of a vector.
+`Rotate` moves all the elements in the vector to the right by the specified number.
+For example, rotating a vector containing `[0,1,2,3,4]` by 2 would result in a vector containing `[3,4,0,1,2]`.
+To rotate elements to the left, a negative number can be used with the rotate function.
+
+Finally, my DSL supports almost all scalar datatypes. It can operate on 8, 16, 32, and 64 bit integers (both signed and unsigned), boolean values, and 32 bit floating point numbers. Unfortunately, the backend used to implement my language does not always support 64 bit floats (also known as doubles in some languages), so my DSL cannot universally support them.
+
+## Language Implementation
