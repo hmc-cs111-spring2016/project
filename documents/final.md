@@ -80,6 +80,58 @@ The user can also save a scheme, using the addForm command: `addForm("(a)ba", "s
 
 ## Implementation Details
 
+I chose to use Python for my project. I started with Scala, with the hope of using the knowledge from the first part of class in the project, but eventually ran in to too many problems. I switched to Python rather than Java or other GPPL's with the hopes of getting something off the ground as quickly as possible (as I had already lost close to a week with Scala). The other big advantage to using Python that I liked was that I didn't have to create classes for all functionality; a vast majority of the functionality is static in my language, and Python supports that more intuitively than other languages. Python also had really straightforward support for API's which I also really liked.
+
+I think the eventual usage of my language will be like an external DSL, through some sort of GUI that will make it even more accessible to the target audience. As I will discuss later, I don't think my language is very "DSL-y", so this is a somewhat difficult question to answer; still, I think it definitely leans heavily towards the external. 
+
+The interpreter class is the "controller" class for the language; the interpreter receives the inputs from the user, and calls on the two helper classes to provide more of the functionality. Those two classes are the poem helper and the scheme helper.
+
+The poem helper takes the poem filename from the interpreter, then converts the poem to a list of lines. From there the poem helper takes the last word on each line, "cleans" it (removing all non-alpha characters, punctuation, and so on), and returns the list of words to the interpreter. As such, the intermediate representation here is the list of words that is sent back to the interpreter. From there, the list of words is sent to the scheme helper.
+
+The scheme helper performs a variety of checks on the rhyme scheme and the list of last words sent to it by the interpreter. First, the poem checks that the rhyme scheme is in a valid form. A rhyme scheme contains letters, signifying the expected rhyme for each line; the scheme can also have parenthesized segments, meaning that segment can be repeated 0 or more times in a valid poem. If there are unclosed parentheses, or if there are parentheses with no letters in them, or something of that nature, the scheme would alert the user that the form is invalid. The helper then checks if the number of lines could possibly match the given scheme; this is done by checking that the length of the poem, after removing parts that are not in parenthesized segments, can theoretically be matched into the remaining parenthesized segments. This check helps speed up the program, because the poem's scheme is not actually computed before the length check.
+
+Then, the scheme of the poem is computed. This is done through a series of API calls, and for each line in the poem, checking if it matches lines above it. If it matches any line above it, it is assigned that rhyme; if not, it is assigned a new rhyme character. These assignments are stored in an ordered dictionary, which is held in the interpreter. Once the scheme is computed, it is checked against the given scheme; from there, the scheme helper can determine if the poem matches the given scheme, and, if not, provide feedback on what went wrong. The ordered dictionary is returned by every funciton in the scheme helper; in this way, it serves as the intermediate representation on the scheme side.
+
+Error messages are handled in a separate file for increased modularity and clarity. Currently, only the three longest error messages are stored there; this is because the other error messages are all one-liners. However, with potential increased functionality in the future, this could be helpful in keeping these messages separate and making it easier to make language consistent across messages (which is especially important here considering the target audience).
+
+## Evaluation
+
+I don't think the language is particularly DSL-y. There isn't really much of a language component here; the syntax is limited to three commands. This is important and intentional, considering the target audience as I've done throughout, but it means that it doesn't really feel like it's own language necessarily. Also, because an interpreter is instantiated, and then commands are called using that instance (i.e. `interpreter.checkPattern()`), it feels more like simple OOP than actual DSL-ness. That said, I did have DSL principles in mind throughout the design and implementation process, and I think that helped me produce better (more modularized, more clear) code and will help with extensibility if I keep working on this in the future.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
