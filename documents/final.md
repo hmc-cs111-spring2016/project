@@ -118,3 +118,20 @@ There are also a lot of operations that could be added. As mentioned earlier, fl
 One very important feature that really should be added is support for vector / scalar operations. Currently my DSL requires creating a vector from a scalar, which is very inefficient. However, I am not sure how easy this would be with operator overloading in C++ or implicit conversions.
 
 Revisiting my original evaluation, I accomplished far more than the minimal goals I set for myself (except for getting good performance). Since this was my first experience creating a large C++ library and my first time really using OpenCL, I ended up learning quite a bit about what I could and could not (easily) do along the way and and am glad I was able to accomplish what I did. Unfortunately this did mean that my vision for this DSL had to change from what I originally envisioned (a complete `std::vector` replacement). Regardless, I hope the example programs show just how powerful and simple this DSL can be.
+
+Below are the times it takes to run each of the example programs on my dGPU (Nvidia 650M), iGPU (Intel HD Graphics 4000), CPU (2.3 GHz 4-core hyperthreaded i7-3615QM), and on the same CPU serially. Note that all of these were run using my DSL with OpenCL and that an optimized serial implementation would likely run much faster without the overhead of OpenCL. It's also worth noting that these results will not be perfect as other programs were running on my computer during these tests (though they were not doing a significant amount of work during the time of the tests). Ideally the CPU and iGPU would be completely unoccupied when the tests were running.
+
+| File   | Device | Run time |
+|--------|--------|----------|
+| Tests  | dGPU   | 14.701s  |
+|        | iGPU   | 8.332s   |
+|        | CPU    | 4.447s   |
+|        | serial | 7.511s   |
+| Kmeans | dGPU   | 1.971s   |
+|        | iGPU   | 1.432s   |
+|        | CPU    | 1.249s   |
+|        | serial | 1.247s   |
+| Keys   | dGPU   | 7.094s   |
+|        | iGPU   | 5.214s   |
+|        | CPU    | 0.856s   |
+|        | serial | 1.632s   |
