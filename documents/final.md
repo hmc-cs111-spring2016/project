@@ -121,7 +121,7 @@ Sinec this is my first time actually using OpenCL, perhaps this is due to me mis
 The performance problem could also be due to issues with memory allocation and copying being slower on the GPUs than on the CPU.
 However, this should not have been a problem for the keys example program as there should be very little data movement between the CPU and GPU.
 
-There are also a lot of operations that could be added. As mentioned earlier, float methods have not been added yet (e.g. `sqrt()`). I also never got around to implementing a parallel scan method either, but this would be difficult to do well and is not used very often. Finally, I'm not sure if my code currently supports every assignment operator or working with const vectors very well. However, none of these prevented me from writing the example programs included, meaning the DSL is at least functional on a basic level.
+There are also a lot of operations that could be added. As mentioned earlier, float methods have not been added yet (e.g. `sqrt()`). I also never got around to implementing a parallel scan method either, but this would be difficult to do well and is not used very often. My code does not support casting at the moment either. Finally, I'm not sure if my code currently supports every assignment operator or working with const vectors very well. However, none of these prevented me from writing the example programs included, meaning the DSL is at least functional on a basic level.
 
 One very important feature that really should be added is support for vector / scalar operations. Currently my DSL requires creating a vector from a scalar, which is very inefficient. However, I am not sure how easy this would be with operator overloading in C++ or implicit conversions.
 
