@@ -1,0 +1,13 @@
+## Project Suggestions
+
+Your project seems like it's coming along well. I just want to reiterate what we talked about in class on Monday about allowing users to specify preference through multiple parameters. By this I mean being able to rate a combination of factors with a single rating. Currently you are splitting up the rating so that professors, classes, times are all rated separately. I think that some users may find it makes more sense to rate a professor, class combination than to rate the professor and the class separately. As you described your code, I don't think it would be difficult to allow for the user to pick between either rating separately or rating together. This would probably be the bet option. 
+
+## Project Notebook Questions
+
+#### Which information would you want to see in the output?
+
+Personally I think the best output format would be as close as you can get to what a stereotypical calendar GUI looks like. There's a reason that they look the way they do, because it's easy for a user to quickly see what their week would look like with the given schedule. If you are limited to ASCII output which I'm assuming you are, then I think each day of the week along with the classes/times for that day would be a good start. You are wondering whether or not you should output the score for each class. I think that in an ideal scenario, if the score is calculated well, you should not have to show the user the internal score you gave each class. Of course, it is still a difficult problem of correctly scoring a class so possibly showing the score may help if users are not happy with the output schedules. But remember, the more you make the user tweak their scores to make your program work, the more likely it is that they would find it easier to just creating a schedule without your program. 
+
+#### "I am not sure how to allow my users to include my code in whatever file they are writing their programs in."
+
+If you want your logic to be separate from the logic/preferences your users write, (which I think is a good idea) you could try including the user's file in your prolog code. A simple search on stack overflow found [this](http://stackoverflow.com/questions/4097451/how-do-i-include-a-pl-file-in-prolog). Another option that may take a little longer and you only may want to implement if you have time is to write a program in some other language to combine the two files. This way you could have more control of the syntax your user writes their preferences in and they would not have to see the "back-end" so to speak of your code. 
