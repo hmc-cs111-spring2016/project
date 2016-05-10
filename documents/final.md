@@ -58,6 +58,16 @@ Here are two examples of what a program in this language could look like, writte
 
 ## Language Implementation
 
+As I considered the best ways to implement my language, I eventually decided on a web-based design because of the flexibility in 
+designing an interface. I thought that a clean, clear GUI was essential to my design, and the tools for Web Dev make a quick mock-up 
+of something like that very easy. As such, this is written in HTML, CSS, and JavaScript. These languages are used to create an external DSL. This makes sense, because as far as I know, there are no internal features of any language that support the type of logic needed to describe human movement. However, it is easy to use these three languages to build a web app which is a DSL. 
+
+### Architecture Overview
+
+The language is split into three main files: index.html, app.js, and style.css. Index.html has all of the containers for different elements of the page. The first movement phrase is intialized here. It also links in the app.js and style.css. Style.css is just a 
+basic stylesheet, so it formats the page to provid a nice looking GUI. App.js contains the mechanics of the language. There are two
+main functions that this relies on. First, there's the function that generates new movement boxes when "Add a Movement" is clicked. Second, there is a function that generates the IR when "Create a Phrase" is clicked. This function (called createPhrase) is both the parsing and the generation of the intermediate representation in one go. This is because parsing is extremely simple--it is just grabbing the values from the fields in the text. Then, these are into a list, and all the lists are made into one big list of lists, which is the immediate representation. As such, the new language pretty much has no relation to the syntax of any of its three host languages; it just relies on their capabilities to create something entirely new. 
+
 ## Evaluation
 
 
