@@ -32,6 +32,11 @@ constraints, I did not get to actually connecting to the 3D visualization. Howev
 instead. The only area in which the user might have an error is if they input an impossible time. As such, there are messages that 
 let the user know that the time entered is invalid. 
 
-### Details
+### GUI Design
+
+The GUI is set up so that each movement the user creates is seperated by a green box. To add new movements, the user clicks the "Add
+a Movement" button. To generate a phrase, the user clicks the "Create Phrase" to generate the output. In each box, the user can specify the vertical, lateral, and sagittal positioning along with the time duration. The positioning is specified through dropdown menus, and the user manually types the time in.
+
+The GUI is set up so there are few ways for a user to input an invalid phrase. There is always at least one box to input a movement on the screen. The dropdown menus only have feasible options, so the user cannot input an impossible positioning. Retrospectively, it would have been better to make it so that it was harder to input an incorrect time. 
 
 
