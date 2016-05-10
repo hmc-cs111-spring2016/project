@@ -51,7 +51,9 @@ a phrase. The basic computation performed is that the language must figure out w
 
 Here are two examples of what a program in this language could look like, written in the IR:
 
+[ [High, Left, Forward, 3], [High, Left, Backward, 5], [Medium, Right, Backward, 4], [Low, Right, Forward, 3] ]
 
+[ [Medium, None, Forward, 2], [Medium, None, Backward, 2], [Low, None, Backward, 3], [Low, Right, Backward, 3] ]
 
 
 ## Language Implementation
