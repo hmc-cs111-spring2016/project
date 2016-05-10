@@ -35,8 +35,28 @@ let the user know that the time entered is invalid.
 ### GUI Design
 
 The GUI is set up so that each movement the user creates is seperated by a green box. To add new movements, the user clicks the "Add
-a Movement" button. To generate a phrase, the user clicks the "Create Phrase" to generate the output. In each box, the user can specify the vertical, lateral, and sagittal positioning along with the time duration. The positioning is specified through dropdown menus, and the user manually types the time in.
+a Movement" button. To generate a phrase, the user clicks the "Create Phrase" to generate the output. In each box, the user can specify the vertical, lateral, and sagittal positioning along with the time duration. The positioning is specified through dropdown menus, and the user manually types the time in. 
 
 The GUI is set up so there are few ways for a user to input an invalid phrase. There is always at least one box to input a movement on the screen. The dropdown menus only have feasible options, so the user cannot input an impossible positioning. Retrospectively, it would have been better to make it so that it was harder to input an incorrect time. 
+
+This set-up is conducive to the user because it clearly organizes the information into four main categories. This is a clear way to 
+process the information. The output, the corresponding Laban symbols, appears nearby, so that the user can see how their described movements translates to a particular Laban symbol. 
+
+### Computation, Data, and Control Flow
+
+The main data structure that this relies on is a list of lists, where each sublist defines a movement and the full list defines
+a phrase. The basic computation performed is that the language must figure out what movement is being depicted, and translates the movement so that it can be displayed as the Laban symbol. The control flow is defined by the order in which the movements are inputted. Since there isn't anyway to reorder the movements, then the order in which they're written is the final word.
+
+## Example programs
+
+Here are two examples of what a program in this language could look like, written in the IR:
+
+
+
+
+## Language Implementation
+
+## Evaluation
+
 
 
