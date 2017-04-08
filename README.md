@@ -14,14 +14,14 @@
 For this project, you will design, implement, evaluate, and document
 your own domain-specific language. This will be a significant effort on
 your part, and the project makes up 40% of your grade in this course.
-There will be periodic milestones during the rest of semester, to help keep you
-on track and to provide you feedback as you work on your language.
+There will be periodic milestones during the rest of the semester, to help keep you
+on track and to provide you with feedback as you work on your language.
 
 Other than the deadlines and requirements described below, you have
 complete freedom. In particular, you're free to choose the domain and
 host language in which you will implement your DSL. You should choose a
 domain that really interests you and for which having a DSL would
-improve yours or others' programming productivity. I and other people in the
+improve your or others' programming productivity. I and other people in the
 class can also provide guidance for designing / choosing a good project.
 
 ## Teamwork
